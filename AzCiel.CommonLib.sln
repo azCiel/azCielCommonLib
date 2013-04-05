@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzCiel.CommonLib", "AzCiel.CommonLib\AzCiel.CommonLib.csproj", "{4AF2FD38-0804-43C1-82F0-F1698064F785}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzCiel.CommonLib.Test", "AzCiel.CommonLib.Test\AzCiel.CommonLib.Test.csproj", "{ED78A406-0D6D-4F07-A6CA-3C76675B35DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AF2FD38-0804-43C1-82F0-F1698064F785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF2FD38-0804-43C1-82F0-F1698064F785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF2FD38-0804-43C1-82F0-F1698064F785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF2FD38-0804-43C1-82F0-F1698064F785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED78A406-0D6D-4F07-A6CA-3C76675B35DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED78A406-0D6D-4F07-A6CA-3C76675B35DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED78A406-0D6D-4F07-A6CA-3C76675B35DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED78A406-0D6D-4F07-A6CA-3C76675B35DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
