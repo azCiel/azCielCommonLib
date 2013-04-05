@@ -2,6 +2,7 @@
  * Copyright (c) 2006 Japan Computer Co.,Ltd.
  * Copyright (c) 2008 MACHIDA Hideki
  * Copyright (c) 2008 az'Ciel HAKKO Co.,Ltd.
+ * Copyright (c) 2013 HAKKO Development Co.,Ltd. az'Ciel division.
  * All Rights Reserved.
  * 
  * Redistribution and use in source and binary forms, with or without
@@ -35,7 +36,7 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AzCiel.CommonLib.IO;
 
 namespace AzCiel.CommonLib.Test.IO {
@@ -43,13 +44,13 @@ namespace AzCiel.CommonLib.Test.IO {
     /// <summary>
     /// CSV出力クラスのテストクラス
     /// </summary>
-    [TestFixture]
+    [TestClassAttribute]
     public class CVSOutputTest {
 
         /// <summary>
         /// 文字列クォート処理のテスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestMakeColumn() {
             CSVOutput outer = new CSVOutput();
 
@@ -89,7 +90,7 @@ namespace AzCiel.CommonLib.Test.IO {
         /// <summary>
         /// １行文字列生成のテスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestMakeOneLine() {
             CSVOutput outer = new CSVOutput();
 
@@ -134,7 +135,7 @@ namespace AzCiel.CommonLib.Test.IO {
         /// <summary>
         /// CSVファイル出力のテスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestWriteCsv() {
             string file = Path.GetTempFileName();
             try {
@@ -180,7 +181,7 @@ namespace AzCiel.CommonLib.Test.IO {
         /// <summary>
         /// ファイルオープンのテスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestOpen() {
             // 例外をテストしてみる (既存ディレクトリと同名のファイルは作れない)
             using (CSVOutput outer3 = new CSVOutput()) {

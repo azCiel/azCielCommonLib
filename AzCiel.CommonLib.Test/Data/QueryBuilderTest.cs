@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (c) 2009 HAKKO Development Co.,Ltd. az'Ciel division.
+ * Copyright (c) 2009,2013 HAKKO Development Co.,Ltd. az'Ciel division.
  * Copyright (c) 2008 az'Ciel HAKKO Co.,Ltd.
  * All Rights Reserved.
  * 
@@ -36,20 +36,20 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using AzCiel.CommonLib.Data;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AzCiel.CommonLib.Test.Data {
 
     /// <summary>
     /// DbCommand ビルダークラスのテスククラス
     /// </summary>
-    [TestFixture]
+    [TestClassAttribute]
     public class QueryBuilderTest {
 
         /// <summary>
         /// DbCommand ビルダーのテスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestQueryBuilder() {
 
             string query = @"SELECT * FROM table WHERE id=? OR id=? OR id=?";
@@ -71,7 +71,7 @@ namespace AzCiel.CommonLib.Test.Data {
 
         }
 
-        [Test]
+        [TestMethodAttribute]
         public void TestBuildResultSet() {
 
             DataSet ds = new DataSet();

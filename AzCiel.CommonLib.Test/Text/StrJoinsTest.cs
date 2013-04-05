@@ -1,5 +1,6 @@
 ﻿/*
  * Copyright (c) 2008 az'Ciel HAKKO Co.,Ltd.
+ * Copyright (c) 2013 HAKKO Development Co.,Ltd. az'Ciel division.
  * All Rights Reserved.
  * 
  * Redistribution and use in source and binary forms, with or without
@@ -32,7 +33,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AzCiel.CommonLib.Text;
 
 namespace AzCiel.CommonLib.Test.Text {
@@ -40,13 +41,13 @@ namespace AzCiel.CommonLib.Test.Text {
     /// <summary>
     /// 文字列 JOIN クラステストクラス
     /// </summary>
-    [TestFixture]
+    [TestClassAttribute]
     public class StrJoinsTest {
 
         /// <summary>
         /// オブジェクトコレクションを文字列として連結するテスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestJoin() {
             string[] instrs = { @"A", @"B", @"C" };
             string sep = @",";
@@ -60,7 +61,7 @@ namespace AzCiel.CommonLib.Test.Text {
         /// <summary>
         /// オブジェクトコレクションを文字列として連結するテスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestJoin2() {
             string[] instrs = { @"A", @"B", @"C", @"D", @"E", @"F" };
             string sep = @",";

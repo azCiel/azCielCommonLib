@@ -1,5 +1,6 @@
 ﻿/*
  * Copyright (c) 2008 az'Ciel HAKKO Co.,Ltd.
+ * Copyright (c) 2013 HAKKO Development Co.,Ltd. az'Ciel division.
  * All Rights Reserved.
  * 
  * Redistribution and use in source and binary forms, with or without
@@ -32,20 +33,20 @@
 using System;
 using System.Text;
 using AzCiel.CommonLib.Text;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AzCiel.CommonLib.Test.Text {
 
     /// <summary>
     /// 日本語文字列ユーティリティクラスのテストクラスです
     /// </summary>
-    [TestFixture]
+    [TestClassAttribute]
     public class JStrUtilsTest {
 
         /// <summary>
         /// 指定バイト数切り詰めテスト (切り詰められたか？)
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestReduceString1() {
             Encoding encoding = Encoding.GetEncoding(@"csWindows31J");
             string instr = @"１２３４５６７";
@@ -59,7 +60,7 @@ namespace AzCiel.CommonLib.Test.Text {
         /// <summary>
         /// 指定バイト数切り詰めテスト (パディングされたか？)
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestReduceString2() {
             Encoding encoding = Encoding.GetEncoding(@"csWindows31J");
             string instr = @"１２３４５";
@@ -73,7 +74,7 @@ namespace AzCiel.CommonLib.Test.Text {
         /// <summary>
         /// 指定バイト数切り詰めテスト (パディングされないか？)
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestReduceString3() {
             Encoding encoding = Encoding.GetEncoding(@"csWindows31J");
             string instr = @"１２３４５";
@@ -87,7 +88,7 @@ namespace AzCiel.CommonLib.Test.Text {
         /// <summary>
         /// 全角→半角変換テスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestZen2Han() {
             string instr = @"１２３ＡＢＣ123ABCあいうアイウがぎぐガギグぱぴぷパピプう゛ヴ￥￥\";
             string expstr = @"123ABC123ABCｱｲｳｱｲｳｶﾞｷﾞｸﾞｶﾞｷﾞｸﾞﾊﾟﾋﾟﾌﾟﾊﾟﾋﾟﾌﾟｳﾞｳﾞ\\\";
@@ -100,7 +101,7 @@ namespace AzCiel.CommonLib.Test.Text {
         /// <summary>
         /// 半角→全角変換テスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestHan2Zen() {
             string instr = @"123ABCｱｲｳｶﾞｷﾞｸﾞﾊﾟﾋﾟﾌﾟｳﾞ\\";
             string expstr = @"１２３ＡＢＣアイウガギグパピプヴ￥￥";
@@ -113,7 +114,7 @@ namespace AzCiel.CommonLib.Test.Text {
         /// <summary>
         /// ひらがな→カタカナ変換テスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestHira2Kata() {
             string instr = @"あいうえおがぎぐげごぱぴぷぺぽう゛ウ゛ゑ";
             string expstr = @"アイウエオガギグゲゴパピプペポヴウ゛ヱ";
@@ -126,7 +127,7 @@ namespace AzCiel.CommonLib.Test.Text {
         /// <summary>
         /// カタカナ→ひらがな変換テスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestKata2Hira() {
             string instr = @"アイウエオガギグゲゴパピプペポヴウ゛ヱ";
             string expstr = @"あいうえおがぎぐげごぱぴぷぺぽう゛う゛ゑ";

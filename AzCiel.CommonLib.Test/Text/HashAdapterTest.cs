@@ -2,6 +2,7 @@
  * Copyright (c) 2006 Japan Computer Co.,Ltd.
  * Copyright (c) 2008 MACHIDA Hideki
  * Copyright (c) 2008 az'Ciel HAKKO Co.,Ltd.
+ * Copyright (c) 2013 HAKKO Development Co.,Ltd. az'Ciel division.
  * All Rights Reserved.
  * 
  * Redistribution and use in source and binary forms, with or without
@@ -33,20 +34,20 @@
 
 using System;
 using AzCiel.CommonLib.Text;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AzCiel.CommonLib.Test.Text {
 
     /// <summary>
     /// ハッシュ Adapter クラスのテストクラスです
     /// </summary>
-    [TestFixture]
+    [TestClassAttribute]
     public class HashAdapterTest {
 
         /// <summary>
         /// MD5ハッシュのテスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestMD5() {
             HashAdapter hash = new MD5Hash();
             string src1 = @"ABC";
@@ -66,7 +67,7 @@ namespace AzCiel.CommonLib.Test.Text {
         /// <summary>
         /// SHA1ハッシュのテスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestSHA1() {
             HashAdapter hash = new SHA1Hash();
             string src1 = @"ABC";

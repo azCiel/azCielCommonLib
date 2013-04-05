@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (c) 2009 HAKKO Development Co.,Ltd. az'Ciel division.
+ * Copyright (c) 2009,2013 HAKKO Development Co.,Ltd. az'Ciel division.
  * Copyright (c) 2008 az'Ciel HAKKO Co.,Ltd.
  * All Rights Reserved.
  * 
@@ -35,20 +35,20 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.SqlClient;
 using AzCiel.CommonLib.Data;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AzCiel.CommonLib.Test.Data {
 
     /// <summary>
     /// 更新用 DbCommand ビルダークラスのテストクラス
     /// </summary>
-    [TestFixture]
+    [TestClassAttribute]
     public class UpdateQueryBuilderTest {
 
         /// <summary>
         /// INSERT 文生成テスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestUpdateQueryBuilder1() {
             IDictionary<string, object> param = new Dictionary<string, object>();
             param.Add(@"COLUMN1", 1);
@@ -71,7 +71,7 @@ namespace AzCiel.CommonLib.Test.Data {
         /// <summary>
         /// UPDATE 文生成テスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestUpdateQueryBuilder2() {
             IDictionary<string, object> param = new Dictionary<string, object>();
             param.Add(@"COLUMN1", 1);
@@ -101,7 +101,7 @@ namespace AzCiel.CommonLib.Test.Data {
         /// <summary>
         /// INSERT 文生成テスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestUpdateQueryBuilder3() {
 
             string tbl = @"TableName";
@@ -123,7 +123,7 @@ namespace AzCiel.CommonLib.Test.Data {
         /// <summary>
         /// UPDATAE 文生成テスト
         /// </summary>
-        [Test]
+        [TestMethodAttribute]
         public void TestUpdateQueryBuilder4() {
 
             object[] whereParam = { 2, @"DEF" };
